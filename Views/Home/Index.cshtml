@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Form
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter your Information</h1>
+    <form action="process" method="post">
+        <div><label for="firstName"> First Name </label></div>
+        <div><input asp-for="firstName"></div>
+        <span asp-validation-for="firstName" class="text-danger"></span>
+
+        <div><label for="LastName"> Last Name </label></div>
+        <div><input asp-for="lastName"></div>
+        <span asp-validation-for="lastName" class="text-danger"></span>
+
+        <div><label for="age">Age</label></div>
+        <div><input asp-for="age"></div>
+        <span asp-validation-for="age" class="text-danger"></span>
+
+        <div><label for="email">Email</label></div>
+        <div><input asp-for="email"></div>
+        <span asp-validation-for="email" class="text-danger"></span>
+
+        <div><label for="password">Password</label></div>
+        <div><input asp-for="password"></div>
+        <span asp-validation-for="password" class="text-danger"></span>
+
+        <div><input type="submit" value="Submit" class="btn btn-primary"></div>
+    </form>
+</body>
+</html>
